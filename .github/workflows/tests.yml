@@ -79,7 +79,7 @@ jobs:
       - uses: julia-actions/julia-buildpkg@v1
         if: "${{ inputs.buildpkg }}"
 
-      - name: "Run tests on ${{ inputs.os }} with Julia v${{ inputs.julia-version }}"
+      - name: "${{ inputs.group }}: Run tests on ${{ inputs.os }} with Julia v${{ inputs.julia-version }}"
         uses: julia-actions/julia-runtest@v1
         with:
           project: "${{ inputs.project }}"
